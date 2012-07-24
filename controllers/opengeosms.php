@@ -49,8 +49,8 @@ class OpenGeoSMS_Controller extends Template_Controller
 			if ( $incident->id != 0 )
 			{
 				//get incident location.
-				$lat = round($incident->location->latitude, 2);
-				$lon = round($incident->location->longitude, 2);
+				$lat = round($incident->location->latitude, 6);
+				$lon = round($incident->location->longitude, 6);
 				
 				//send the sms
 				$sms_message = "http://maps.google.com.tw/?q=$lat,$lon&GeoSMS\n$text";

@@ -82,9 +82,9 @@ class opengeosms_events {
 			return;
 		}
 		
-		$query = $this->db->query(
-				"DELETE FROM " . Kohana::config('database.default.table_prefix') . "message WHERE id = $sms->id;
-			");
+		//$query = $this->db->query(
+		//		"DELETE FROM " . Kohana::config('database.default.table_prefix') . "message WHERE id = $sms->id;
+		//	");
 		
 		$url_array = explode("?q=", $sms_lines[0]);
 		if( count($url_array) >= 2)
